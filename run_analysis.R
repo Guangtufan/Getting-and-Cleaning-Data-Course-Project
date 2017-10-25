@@ -51,5 +51,6 @@ dim(dt_tidy)
 tidygroup <-group_by(dt_tidy, Subject, Activity)
 tidymean <- summarise_all(tidygroup, funs(mean))
 tidymean[1:10, 1:10]
+write.table(tidymean, file = '/Users/yezhuang/Desktop/tidy data.txt', col.names = F)
 
 
